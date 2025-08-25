@@ -2,7 +2,7 @@
 cask "polyforge" do
   desc "CLI"
   homepage "https://github.com/polyium/polyforge"
-  version "0.0.9"
+  version "0.0.10"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,61 +12,55 @@ cask "polyforge" do
 
   on_macos do
     on_intel do
-      url "https://github.com/polyium/polyforge/releases/download/v0.0.9/polyforge-darwin-x86-64.tar.gz",
+      url "https://github.com/polyium/polyforge/releases/download/v0.0.10/polyforge-darwin-x86-64.tar.gz",
         verified: "github.com/polyium/polyforge",
         using: :homebrew_curl,
         cookies: {
           "license" => "accept-backup",
         },
         header: [
-          "X-Version: 0.0.9",
+          "X-Version: 0.0.10",
         ]
-      sha256 "3a035fed35b2509e756fe55f1531d489af005075adb25566ac8021b97d82dde4"
+      sha256 "1f4e8143c38062fbcef32bc02848317822edb7136106fe5543d712d02b537da7"
     end
     on_arm do
-      url "https://github.com/polyium/polyforge/releases/download/v0.0.9/polyforge-darwin-arm64.tar.gz",
+      url "https://github.com/polyium/polyforge/releases/download/v0.0.10/polyforge-darwin-arm64.tar.gz",
         verified: "github.com/polyium/polyforge",
         using: :homebrew_curl,
         cookies: {
           "license" => "accept-backup",
         },
         header: [
-          "X-Version: 0.0.9",
+          "X-Version: 0.0.10",
         ]
-      sha256 "03809b5f8b37c99b13537089c31697d28adcdc737c93918de0dc7a3a4f9a8de7"
+      sha256 "f162ab76dd5b115ef11b7c6c5716f30b5c715c869a6765e564be767cdaa4d36e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/polyium/polyforge/releases/download/v0.0.9/polyforge-linux-x86-64.tar.gz",
+      url "https://github.com/polyium/polyforge/releases/download/v0.0.10/polyforge-linux-x86-64.tar.gz",
         verified: "github.com/polyium/polyforge",
         using: :homebrew_curl,
         cookies: {
           "license" => "accept-backup",
         },
         header: [
-          "X-Version: 0.0.9",
+          "X-Version: 0.0.10",
         ]
-      sha256 "7e8299c1c6fe8ad7aab0dae96a54c2f9d6f886a4a0076b587961e878de245b0a"
+      sha256 "fcf2d9954cbf59a53a9a4a9731c1cfa3522ec582c2ca0cd99fbe39d89b2630b4"
     end
     on_arm do
-      url "https://github.com/polyium/polyforge/releases/download/v0.0.9/polyforge-linux-arm64.tar.gz",
+      url "https://github.com/polyium/polyforge/releases/download/v0.0.10/polyforge-linux-arm64.tar.gz",
         verified: "github.com/polyium/polyforge",
         using: :homebrew_curl,
         cookies: {
           "license" => "accept-backup",
         },
         header: [
-          "X-Version: 0.0.9",
+          "X-Version: 0.0.10",
         ]
-      sha256 "cd29134b691d83c61852643e9d7936eb88fdd864f543525d2ccf4f7096770e0b"
-    end
-  end
-
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/foo"]
+      sha256 "1a2a186afb5cb3f542697ac972ee978f1abca6c2ae46d1c23382e5f74851dc4f"
     end
   end
 
